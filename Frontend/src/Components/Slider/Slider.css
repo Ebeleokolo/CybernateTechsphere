@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --cybernate-blue:#22346E;
+    --cybernate-bg-color: #22346E1A;
+}
+
+.slider-slide {
+    display: flex;
+    transition: transform 0.1s ease;
+    gap: 3%;
+    width: 100%;
+}
+
+.slider-item {
+    position: relative;
+    transition: transform 2s ease-in-out;
+    flex: 0 0 calc(100% - 0%);
+    background-color: var(--cybernate-bg-color);
+    width: 100%;
+    padding: 0 1%;
+}
+
+.slider-main-image {
+    position: relative;
+    height: 58%;
+    width: 100%;
+}
+
+.slider-main-image-text1,
+.slider-main-image-text2 {
+    position: absolute;
+    top: 7%;
+    right: 5.5%;
+    color: rgb(231, 216, 200);
+    font-size: 68px;
+    line-height: 98px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    white-space: nowrap;
+    padding: 0 0 20px 0;
+    height: 30%;
+}
+
+.slider-main-image-text1 p:nth-child(1) {
+   letter-spacing: 7.4px;
+   font-size: 60px;
+   word-spacing: 10px;
+   font-weight: 500;
+}
+
+.slider-main-image-text1 p:nth-child(2) {
+    font-weight: bold;
+    letter-spacing: 6.5px;
+    font-size: 60px;
+    margin: 10px 0 0 0;
+}
+
+.slider-main-image-text p:nth-child(3) {
+    word-spacing: 6.8px;
+    margin: 11px 0 0 0;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+}
+
+.slider-caption {
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 65px;
+    width: 100%;
+    line-height: 40px;
+    white-space: nowrap;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.slider-engage-btn-container {
+    display: flex;
+    justify-content: center ;
+    padding: 0.5% 0 1% 0;
+}
+
+.slider-engage-btn {
+    color: white;
+    white-space: nowrap;
+    padding: 15px 0;
+    border: none;
+    font-size: 60px;
+    border-radius: 15px;
+    width: 38%;
+    font-weight: 400;
+    text-align: center;
+    background-color: var(--cybernate-blue);
+}
+
+.slider-engage-btn:hover {
+    cursor: pointer;
+}
+
+.slider-main-image-text2 {
+    top: 15%;
+    right: 5.5%;
+    font-size: 68px;
+    line-height: 100px;
+}
+
+.slider-main-image-text2 p:nth-child(1) {
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.slider-main-image-text2 p:nth-child(2) {
+    letter-spacing: 3px;
+    word-spacing: 15px;
+    font-weight: 700;
+    margin: 20px 0 25px 0;
+}
+
+.slider-main-image-text2 p:nth-child(3) {
+    word-spacing: 20px;
+    letter-spacing: 4px;
+}
+
+.slider-main-image1 {
+    height: 56%;
+}

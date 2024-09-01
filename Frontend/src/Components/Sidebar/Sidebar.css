@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --cybernate-blue:#22346E;
+    --cybernate-bg-color: #22346E1A;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    transition: 0.5s;
+    transform: translateX(-100%);
+    padding: 60px 5px 0 5px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    z-index: 2;
+    overflow-x: hidden;
+    opacity: 0;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sidebar-cybernate-logo {
+    max-width: 100px;
+}
+
+.sidebar-close-btn {
+    font-size: 30px;
+    border: 2px solid #eee;
+    cursor: pointer;
+    background-color: #fff;
+    width: 18%;
+    height: 10%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.sidebar-close-btn img {
+    display: block;
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+.sidebar-menu li:hover {
+    border-bottom: 1px solid skyblue;
+}
+
+.sidebar-menu li a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar-menu li a:hover {
+    text-decoration: underline;
+    color: skyblue;
+}
+
+.sidebar-arrow {
+    float: right;
+    font-size: larger;
+}
