@@ -14,18 +14,18 @@ function App() {
   const [isSidebarOpen, SetIsSidebarOpen] = useState(false);
 
   const openSidebarHandle = () => {
-    SetIsSidebarOpen(!isSidebarOpen);
+    SetIsSidebarOpen(true);
   }
 
   const closeSidebarHandle = () => {
-    SetIsSidebarOpen(isSidebarOpen);
+    SetIsSidebarOpen(false);
   }
   
   return (
     <div className="App">
       <Navbar openSidebarHandle={openSidebarHandle}/>
       <Slider />
-      <Sidebar isSidebarOpen={isSidebarOpen} closeSidebarHandle={closeSidebarHandle} />
+      {/* <Sidebar isSidebarOpen={isSidebarOpen} closeSidebarHandle={closeSidebarHandle} /> */}
     </div>
   );
 }

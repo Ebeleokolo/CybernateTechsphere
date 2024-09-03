@@ -14,62 +14,106 @@
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  padding: 1% 5%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  height: 20vh;
+  height: 12vh;
+}
+
+.navbar-left-container {
+  display: flex;
+  width: 70%;
+  align-items: center;
+  height: 100%;
 }
 
 .sidebar-open-btn {
-  display: flex;
-  width: 5%;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  cursor: pointer;
-}
-
-.sidebar-toggle-btn-icon {
-  width: 90%;
-  height: 38%;
+  display: none;
 }
 
 .sidebar-open-btn:hover {
-  color: skyblue;
-}
-
-.navbar-container a:nth-child(2) {
-  display: flex;
-  width: 15%;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  margin-left: 10%;
+  cursor: pointer;
 }
 
 .navbar-cybernate-logo {
-  height: 80%;
+  display: block;
+  margin: 0 5%;
+}
+
+.navbar-links {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.navbar-links a {
+  color: var(--cybernate-blue);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.navbar-links a:hover {
+  border-bottom: 2px solid black;
+  cursor: pointer;
 }
 
 .navbar-icons {
   display: flex;
-  width: 18%;
-  justify-content: space-around;
-  align-items: center;
+  width: 15%;
   height: 100%;
-}
-
-.navbar-icons a:nth-child(1),
-.navbar-icons a:nth-child(2) {
-  display: block;
-  height: 100%;
-  width: 30%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  margin-right: 1%;
 }
 
 .navbar-bell-icon,
 .navbar-profile-icon {
-  height: 55%;
+  display: block;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-bell-icon img,
+.navbar-profile-icon img {
+  height: 50%;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .sidebar-open-btn {
+    display: block;
+    margin: 0 25% 0 2% ;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .sidebar-open-btn img {
+    height: 45%;
+  }
+
+  .navbar-cybernate-logo {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 80%;
+    align-items: center;
+  }
+
+  .navbar-cybernate-logo img {
+    height: 80%;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-icons {
+    width: 15%;
+    margin: 0 2% 0 5%;
+    justify-content: space-between;
+  }
+
+  .navbar-bell-icon,
+  .navbar-profile-icon {
+    width: 38%;
+  }
 }
