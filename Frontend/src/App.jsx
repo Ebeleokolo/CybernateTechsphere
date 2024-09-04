@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Home from './Components/Home/Home';
@@ -11,21 +11,38 @@ import Slider from './Components/Slider/Slider';
 
 function App() { 
 
-  const [isSidebarOpen, SetIsSidebarOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const openSidebarHandle = () => {
+
     SetIsSidebarOpen(true);
   }
 
   const closeSidebarHandle = () => {
     SetIsSidebarOpen(false);
+=======
+    setIsSidebarOpen(true); // Opens the sidebar
+  }
+
+  const closeSidebarHandle = () => {
+    setIsSidebarOpen(false); // Closes the sidebar
   }
   
   return (
     <div className="App">
-      <Navbar openSidebarHandle={openSidebarHandle}/>
+      <Navbar openSidebarHandle={openSidebarHandle} />
       <Slider />
+
       {/* <Sidebar isSidebarOpen={isSidebarOpen} closeSidebarHandle={closeSidebarHandle} /> */}
+=======
+      <Sidebar isSidebarOpen={isSidebarOpen} closeSidebarHandle={closeSidebarHandle} />
+      <Home />
+      <AboutUs />
+      <Services />
+      <Solutions />
+      <FAQ />
+      <Contact />
+        
     </div>
   );
 }

@@ -1,0 +1,209 @@
+/* General Styling */
+.profile-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #002F87; /* Matches the color in the screenshot */
+  }
+  
+  .quote {
+    font-size: 18px;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* CyberTechProfile Section */
+  .cyber-tech-profile {
+    margin-bottom: 40px;
+  }
+  
+  .ctcontent {
+    line-height: 1.6;
+    max-height: 300px; /* Limit the height for mobile view */
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    position: relative;
+  }
+  
+  .ctcontent.expanded {
+    max-height: 1000px; /* Increase this value to accommodate expanded content */
+  }
+  
+  .ctcontent::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px; /* Adjust this value as needed */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
+    pointer-events: none;
+  }
+  
+  .ctcontent.expanded::after {
+    display: none; /* Remove the fade effect when expanded */
+  }
+  
+  .read-more-btn {
+    display: block;
+    margin: 20px auto 0 auto;
+    background-color: #002F87; /* Button color matching the screenshot */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .read-more-btn:hover {
+    background-color: #001d58; /* Darker shade for hover effect */
+  }
+  
+  /* AboutUs Section */
+  .about-us {
+    margin-top: 40px;
+  }
+  
+  .round-table-img {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+  
+  /* Desktop-specific styling */
+  @media (min-width: 769px) {
+    .profile-page {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  
+    .ctcontent {
+      max-height: none;
+      overflow: visible;
+    }
+  
+    .read-more-btn {
+      display: none; /* Hide the button on desktop view */
+    }
+  }
+
+
+/* AboutUs Section */
+.about-us {
+    margin-top: 40px;
+}
+
+.round-table-img {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+/* Services Container */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+    gap: 20px; /* Adjust spacing between items */
+  }
+  
+  /* Service Item */
+  .service-item {
+    flex-basis: 30%; /* For three columns on desktop */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .service-item img {
+    width: 50%;
+    height: auto;
+    display: block;
+  }
+  
+  .service-item button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: white;
+    color: rgba(0, 47, 135, 0.8);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .service-item button:hover {
+    background-color: rgba(226, 231, 241, 0.8);
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .services-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .service-item {
+      flex-basis: 100%; /* For single column on mobile */
+    }
+  }
+  
+  /* Team Section */
+.team-section {
+    margin-top: 40px;
+  }
+  
+  .team-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .team-member {
+    text-align: center;
+  }
+  
+  .team-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .team-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .team-title {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .team-icons i {
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
