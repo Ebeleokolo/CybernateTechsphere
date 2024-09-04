@@ -4,48 +4,55 @@ import homemainimage1 from '../../assets/images/homemainimage1.svg';
 import homemainimage2 from '../../assets/images/homemainimage2.svg';
 
 const Slider = () => {
-  return (
-    <section className="slider-container">
-            <div className="slider-slide">
-                <div className="slider-item slider-item1">
-                    <img src={homemainimage1} alt="slider image" className="slider-main-image" />
-                    <div class="slider-main-image-text1">
+    return (
+        <section className="slider-container">
+
+            <div className="first-slide slider-item">
+                <div className="first-slide-text">
+                    <div class="first-slide-text1">
                         <p>Crafting Innovative </p>
                         <p>Technology Solutions</p>
                         <p>for a Seamless Future</p>
                     </div>
-                    <p className="slider-caption">
-                        Pioneering progress; we are dedicated to <br/><br/>
-                        crafting innovative technology solutions to<br/><br/>
-                        seamlessly shape a future of limitless<br/><br/>
-                        possibilities
-                    </p>
-                    <div className="slider-engage-btn-container">
-                        <a href="#" className="slider-engage-btn">Engage With Us</a>
+                    <div className="first-slide-text2">
+                        <p>Pioneering progress; we are dedicated to </p>
+                        <p> crafting innovative technology solutions to</p>
+                        <p>seamlessly shape a future of limitless possibilities</p>
+                    </div>
+                    <div className="slider-engage-btn">
+                        <a href="#">Engage With Us</a>
                     </div>
                 </div>
 
-                <div className="slider-item slider-item2">
-                    <img src={homemainimage2} alt="slider image" className="slider-main-image"/>
-                    <div className="slider-main-image-text2">
+                <div className="first-slide-image">
+                    <img src={homemainimage1} alt="slider image" />
+                </div>
+            </div>
+
+
+            <div className="second-slide slider-item">
+                <div className="second-slide-text">
+                    <div className="second-slide-text1">
                         <p>Revolutionizing</p>
                         <p>Tech Landscapes</p>
-                        <p>with transformational Solutions </p>
+                        <p>with transformational Solutions</p>
                     </div>
-                    <p className="slider-caption">
-                        Delivering transformational solutions that<br/><br/>
-                        redefine the way processes unfold, ensuring <br/><br/>Name
-                        efficiency, adaptability, and unparalleled<br/><br/>
-                        progress
+                    <p className="second-slide-text2">
+                        <p> Delivering transformational solutions that</p>
+                        <p>redefine the way processes unfold, ensuring</p>
+                        <p>efficiency, adaptability, and unparalleled progress</p>
                     </p>
-                    <div className="slider-engage-btn-container">
-                        <a href="#" class="slider-engage-btn">Engage With Us</a>
+                    <div className="slider-engage-btn">
+                        <a href="#">Engage With Us</a>
                     </div>
                 </div>
 
+                <div className="second-slide-image">
+                    <img src={homemainimage2} alt="slider image" />
+                </div>
             </div>
         </section>
-  )
+    )
 }
 
 export default Slider
