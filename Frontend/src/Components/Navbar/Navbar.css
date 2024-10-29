@@ -39,7 +39,7 @@
 
 .navbar-links {
   display: flex;
-  width: 80%;
+  width: 50%;
   justify-content: space-between;
 }
 
@@ -56,9 +56,9 @@
 
 .navbar-icons {
   display: flex;
-  width: 15%;
+  width: 8%;
   height: 100%;
-  margin-right: 1%;
+  margin-right: 0.5%;
 }
 
 .navbar-bell-icon,
@@ -75,6 +75,7 @@
 .navbar-profile-icon img {
   height: 50%;
   width: 100%;
+  
 }
 
 @media (max-width: 768px) {
