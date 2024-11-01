@@ -78,11 +78,11 @@ const AboutUs = () => {
       img: Vector,
       linkedin: "https://www.linkedin.com/in/benjamin-nwokoye-obiajulu-2184a6256/" 
     },
-    {
+   /* {
       name: "Isama Desmond",
       title: "Software Engineer",
       img: Vector
-    },
+    }, */
   ];
 
   return (
