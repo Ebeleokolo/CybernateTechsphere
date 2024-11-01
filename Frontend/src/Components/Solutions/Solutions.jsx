@@ -1,10 +1,11 @@
 import React from "react";
 import consultancyimg from "../../assets/images/consultancyimg.svg";
 import solutionsimg from "../../assets/images/solutionsimg.svg";
+import ellipse from "../../assets/images/Ellipse.svg";
 
 const Solutions = () => {
   return (
-    <div className=" flex flex-col bg-gray-slategrey mt-2 ">
+    <div className=" flex flex-col bg-[#a5b0d51a] mt-2 ">
       <h2 className="self-center text-mainblue mt-5 mb-5 font-600 font-poppins text-31px text-bold">
         SERVICED INDUSTRIES
       </h2>
@@ -18,7 +19,10 @@ const Solutions = () => {
           success in today's dynamic digital landscape.
         </div>
         <div className=" mt-3 w-[600px] h-[200px] border-3 flex  flex-col gap-4 justify-center items-center self-center bg-gray-greenishblue">
-          <img src={consultancyimg} className=" self-center" />
+          <div className="relative flex justify-center items-center">
+            <img src={ellipse} className="w-16 h-16" />
+            <img src={consultancyimg} className="absolute w-8 h-8" />
+          </div>
           <span>
             <h2 className="text-white font-poppins text-30px">Consultancy</h2>
           </span>

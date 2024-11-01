@@ -33,44 +33,61 @@ const AboutUs = () => {
   };
 
   const teamMembers = [
-    { name: "Nate", title: "Founder & CEO, Project Manager", img: Vector },
+    { name: "Nate", 
+      title: "Founder & CEO, Project Manager", 
+      img: Vector,
+      linkedin: "https://www.linkedin.com/in/nnabuikenathanael/" 
+    },
     {
       name: "Nzekwe, Emmanuel",
       title: "Software Development Consultant",
       img: Vector,
+      linkedin: "https://www.linkedin.com/in/emmanuel-nzekwe-76255418a/" 
     },
     {
       name: "Chikadibia Blessing, Nwachukwu",
       title: "Business Intelligence & Data Analyst",
       img: Vector,
+      linkedin: "https://www.linkedin.com/in/nwachukwu-blessing-chika-7ab09a178/" 
     },
     {
       name: "Ebele Lynda, Okolo",
-      title: "Software Engineer & Client Assistance",
+      title: "Software Engineer & Client Assistant",
       img: Vector,
+      linkedin: "https://www.linkedin.com/in/ebele-lynda-okolo/" 
     },
-    { name: "Max Kenneth, Layefa", title: "Software Engineer", img: Vector },
-    { name: "Awele Tonia, Uzu", title: "Executive Marketer", img: Vector },
+    { name: "Max Kenneth, Layefa", 
+      title: "Software Engineer", 
+      img: Vector,
+      linkedin: "https://www.linkedin.com/in/max-kenneth-23a48317b/" 
+    },
+    { name: "Awele Tonia, Uzu", 
+      title: "Executive Marketer", 
+      img: Vector, 
+      linkedin: "https://www.linkedin.com/in/anthonia-uzu-b8614b238/" 
+    },
     {
       name: "Akinsanmi-Akinnuwesi, Martins",
       title: "Lead UI & UX Designer",
       img: Vector,
+      linkedin: "https://www.linkedin.com/in/martins-akinnuwesi-8b8b401b3/" 
     },
     {
       name: "Benjamin Chibundu, Nwokoye-Obiajulu",
       title: "Monitoring & Evaluation",
       img: Vector,
+      linkedin: "https://www.linkedin.com/in/benjamin-nwokoye-obiajulu-2184a6256/" 
     },
     {
-      name: "Desmond Isama, ",
+      name: "Isama Desmond",
       title: "Software Engineer",
-      img: Vector,
+      img: Vector
     },
   ];
 
   return (
-    <div className="flex flex-col  min-h-screen  ">
-      <div className=" w-[800px]  self-center">
+    <div className="flex flex-col min-h-screen">
+      <div className="w-[800px] self-center">
         <h2 className="title">CYBERNATE TECHSPHERE PROFILE</h2>
         <p className={`ctcontent ${expandedProfile ? "expanded" : ""}`}>
           Welcome to Cybernate Techsphere, the pinnacle of innovation where
@@ -111,18 +128,20 @@ const AboutUs = () => {
         )}
       </div>
       {/* AboutUs Section */}
-      <div className="about-us flex flex-col mt-5 border-4 w-100% rounded bg-gray-slategrey">
+      <div className="about-us flex flex-col mt-5 w-100% rounded bg-[#a5b0d51a]"> {/* Updated background color here */}
         <h2 className="title">WHY CHOOSE CYBERNATE TECHSPHERE?</h2>
         <blockquote className="quote flex self-center w-[50%]">
-          “Our aim is to deliver top-notch technology solutions to our
+          "Our aim is to deliver top-notch technology solutions to our
           customers, ensuring their utmost satisfaction, and building trusted
-          partnerships.”
+          partnerships."
         </blockquote>
-        <img
-          src={RoundTable}
-          alt="Round Table Meeting"
-          className="round-table-img"
-        />
+        <div className="flex justify-center px-20">
+          <img
+            src={RoundTable}
+            alt="Round Table Meeting"
+            className="w-[1200px] h-auto rounded-lg"
+          />
+        </div>
         <p className="w-[800px] self-center">
           Because we thrive on challenges and excel in turning them into
           opportunities. Our team of dynamic experts possesses a relentless
@@ -136,7 +155,7 @@ const AboutUs = () => {
           propel them towards success in an ever-evolving digital landscape. Our
           commitment to innovation is not just a buzzword - it's ingrained in
           our DNA, fueling our drive to push boundaries and pioneer
-          groundbreaking solutions. But our dedication doesn’t stop at
+          groundbreaking solutions. But our dedication doesn't stop at
           delivering exceptional solutions. We understand that true success lies
           in building genuine partnerships with our clients. That's why we take
           the time to truly understand their unique needs and aspirations,
@@ -175,7 +194,7 @@ const AboutUs = () => {
               IT Consultancy →
             </button>
           </div>
-          <div className="sev-item relative flex-1 ">
+          <div className="sev-item relative flex-1">
             <img
               src={Gshake}
               alt="Project Management"
@@ -187,16 +206,16 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      {/* Services Section */}
+
       {/* Team Section */}
       <div className="team-section flex flex-col">
         <h2 className="team-title flex self-center mt-5 text-mainblue font-poppins font-700 text-31px tracking-[0.01em]">
           CYBERNATE TECHSPHERE TEAM
         </h2>
-        <div className="team-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4   p-4">
+        <div className="team-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
           {teamMembers.map((member, index) => (
             <div
-              className="team-member flex flex-col items-center text-center bg-gray-greyish border border-gray-300 rounded-lg p-4 relative h-[180px]"
+              className="team-member flex flex-col items-center text-center bg-gray-greyish rounded-lg p-4 relative h-[180px]"
               key={index}
             >
               <img
@@ -206,8 +225,10 @@ const AboutUs = () => {
               />
               <h3 className="team-name">{member.name}</h3>
               <p className="team-title">{member.title}</p>
-              <div className="team-icons flex justify-center items-center space-x-2 mt-2  absolute  bottom-2 left-2 p-2  rounded">
-                <img src={linkedin} />
+              <div className="team-icons flex justify-center items-center space-x-2 mt-2 absolute bottom-2 left-2 p-2 rounded">
+                <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                  <img src={linkedin} className="cursor-pointer" />
+                </a>
                 <img src={twitter} />
               </div>
             </div>

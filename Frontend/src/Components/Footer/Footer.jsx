@@ -4,96 +4,121 @@ import twitter from "../../assets/images/twitter.svg";
 import messagesent from "../../assets/images/sentimage.svg";
 import cyberccimg from "../../assets/images/cybercccimg.svg";
 import wwwebimage from "../../assets/images/wwwebimage.svg";
-
 import cybernateimage from "../../assets/images/cybernateimage.svg";
+import time from "../../assets/images/time.svg";
 
 function Footer() {
   return (
-    <div className="flex flex-col items-center ">
-      <div className="flex flex-col gap-4 w-[90%]  mt-10">
-        <div className="flex gap-4 ">
-          <div className="w-[30%] mt-3 gap-3 flex flex-col">
-            <div className="flex justify-center">
-              <img src={cybernateimage} className="h-auto w-auto" />
+    <div className="flex flex-col items-center bg-[#22346E1A]">
+      <div className="flex flex-col w-[90%] mt-10 space-y-8">
+        <div className="flex justify-between">
+          {/* Company Info Section */}
+          <div className="w-[30%] flex flex-col space-y-4">
+            <div className="flex justify-start">
+              <img src={cybernateimage} alt="Cybernate Logo" className="h-10" />
             </div>
-            <span>
+            <p className="text-sm leading-relaxed">
               Elevate your possibilities with Cybernate Techsphere. At the
               forefront of innovation, we blend expertise and passion to deliver
               cutting-edge solutions tailored to your needs. Explore the essence
               of success and partnership with us- where excellence meets
               ingenuity, shaping a future of endless possibilities.
-            </span>
-
-            <div className="flex">
-              <img src={linkedin} className="linkedin" />
-              <img src={twitter} className="twitter" />
+            </p>
+            <div className="flex space-x-4">
+              <img src={linkedin} className="h-6 w-6" alt="LinkedIn" />
+              <img src={twitter} className="h-6 w-6" alt="Twitter" />
             </div>
           </div>
 
-          <div className=" flex flex-col w-[30%] mt-10">
-            <div className="font-bold text-xl">Solutions:</div>
+          {/* Solutions Section */}
+          <div className="w-[30%] flex flex-col">
+            <h3 className="font-bold text-xl mb-4">Solutions:</h3>
             <div className="space-y-2">
-              <div> {">"} IT Consulting</div>
-              <div> {">"} IT Project Management</div>
-              <div> {">"} Mobile App and Software Development</div>
-              <div> {">"} IT Training and Support</div>
-              <div> {">"} Cybersecurity and Networking Solutions</div>
-              <div> {">"} Managed IT Services</div>
-              <div> {">"} Data Analytics and Business Intelligence</div>
-              <div>
-                {" "}
-                {">"} Artificial Intelligence (AI) and Machine Learning (ML)
+              <div className="flex items-center">
+                <span className="mr-2">{">"}</span>
+                <span>IT Consulting</span>
+              </div>
+              <div className="flex items-center">
+                <span className="mr-2">{">"}</span>
+                <span>IT Project Management</span>
+              </div>
+              <div className="flex items-center">
+                <span className="mr-2">{">"}</span>
+                <span>Mobile App and Software Development</span>
+              </div>
+              <div className="flex items-center">
+                <span className="mr-2">{">"}</span>
+                <span>IT Training and Support</span>
+              </div>
+              <div className="flex items-center">
+                <span className="mr-2">{">"}</span>
+                <span>Cybersecurity and Networking Solutions</span>
+              </div>
+              <div className="flex items-center">
+                <span className="mr-2">{">"}</span>
+                <span>Managed IT Services</span>
+              </div>
+              <div className="flex items-center">
+                <span className="mr-2">{">"}</span>
+                <span>Data Analytics and Business Intelligence</span>
+              </div>
+              <div className="flex items-center">
+                <span className="mr-2">{">"}</span>
+                <span>Artificial Intelligence (AI) and Machine Learning (ML)</span>
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col  mt-10 w-[30%]">
-            <div className="font-bold text-xl">Contact Info</div>
-            <div className="space-y-2">
-              <div>Opening Hours: 9:00 AM - 4:00 PM</div>
-              <div>Phone: +234 (0) 706 252 5790</div>
-              <div>Email: hello@cybernatetechsphere.com</div>
-              <div>Consultation Space: Uyo, Akwa Ibom</div>
+          {/* Contact Info Section */}
+          <div className="w-[30%] flex flex-col">
+            <h3 className="font-bold text-xl mb-4">Contact Info</h3>
+            <div className="space-y-4">
+              <div className="flex items-center">
+                <span>Opening Hours: 9:00 AM - 4:00 PM</span>
+              </div>
+              <div className="flex items-center">
+                <span>Phone: +234 (0) 706 252 5790</span>
+              </div>
+              <div className="flex items-center">
+                <span>Email: hello@cybernatetechsphere.com</span>
+              </div>
+              <div className="flex items-center">
+                <span>Consultation Space: Uyo, Akwa Ibom</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="p-6 rounded-lg">
-          <div className="text-start mb-4">
-            <h2 className="text-2xl font-bold mb-2">
-              Subscribe to our Newsletter
-            </h2>
-            <p>
-              Join our subscriber list for the latest in technology-related news
-              and updates.
-            </p>
+        {/* Newsletter Section */}
+        <div className="w-full">
+          <div className="mb-4">
+            <h2 className="text-2xl font-bold mb-2">Subscribe to our Newsletter</h2>
+            <p>Join our subscriber list for the latest in technology-related news and updates.</p>
           </div>
-          <div className="flex justify-start mb-4">
+          <div className="flex flex-col space-y-4">
             <input
               type="email"
               placeholder="Enter Email"
               className="p-2 w-80 border border-gray-300 rounded-md"
             />
-          </div>
-
-          <div className="flex justify-start">
-            <button className=" text-white px-4 py-2 flex gap-3 rounded-md bg-navyblue w-80">
+            <button className="bg-[#22346E] text-white px-4 py-2 flex items-center space-x-2 rounded-md w-80">
               <span>Subscribe Now</span>
-              <img src={messagesent} />
+              <img src={messagesent} alt="Send" className="h-5" />
             </button>
           </div>
         </div>
 
-        <hr className="my-6 border-t border-gray-300" />
+        <hr className="border-t border-gray-300" />
 
-        <div className="flex items-start justify-around">
-          <div className=" flex justify-around g-5 items-start">
-            <img src={wwwebimage} />
-            <span>
+        {/* Footer Bottom */}
+        <div className="flex justify-between items-center pb-6">
+          <div className="flex items-center space-x-4">
+            <img src={wwwebimage} alt="Web" className="h-6" />
+            <span className="text-sm">
               English (Nigeria) Privacy Policy Cookie policy Terms of Use
             </span>
           </div>
-          <img src={cyberccimg} />
+          <img src={cyberccimg} alt="Copyright" className="h-6" />
         </div>
       </div>
     </div>
